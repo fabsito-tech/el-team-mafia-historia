@@ -28,28 +28,33 @@
     footer{text-align:center;padding:28px 15px 46px;color:#b9a17b;font: .78rem system-ui,sans-serif}
     @media(max-width:560px){.cover{min-height:70vh}.top{padding:10px 16px}.readout{font-size:.72rem}.scroll{padding-left:22px;padding-right:22px}.scroll:before,.scroll:after{left:-7px;right:-7px;height:18px}.cast{padding:18px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.arrow{animation:none}.chapter,.chapter.reveal{transition:none;transform:none}.chapter.reveal{opacity:1}}
+    /* Rediseño: un solo pergamino, con rodillos finos de 2,5 mm */
+    body{background-color:#1b130d;background-image:radial-gradient(ellipse at 50% 14%,#6b4d2d 0,#36251a 48%,#17100b 100%),repeating-linear-gradient(92deg,#ffffff03 0 2px,#00000008 3px 6px)}
+    main{max-width:850px;margin:0 auto;padding:22px clamp(18px,4vw,36px) 55px}
+    .scroll{margin:0 auto;padding:clamp(25px,5vw,52px) clamp(20px,6vw,64px);background-color:#ead7ac;background-image:radial-gradient(ellipse at 12% 8%,#fff7dc80 0,transparent 28%),radial-gradient(ellipse at 88% 78%,#9873411c 0,transparent 34%),repeating-linear-gradient(4deg,#75562a08 0 1px,transparent 1px 5px),linear-gradient(100deg,#d8c18f 0,#f4e6c5 7%,#f0dfb8 50%,#f6e8c8 93%,#d2b885 100%);border:1px solid #9c7a4b;border-radius:3px;box-shadow:0 28px 65px #080503a8,inset 0 0 28px #795b3429,inset 0 0 0 5px #e8d4a8,inset 0 0 0 6px #b08d5c66;isolation:isolate}
+    .scroll:before,.scroll:after{left:-12px;right:-12px;height:2.5mm;border:1px solid #5a3d20;border-radius:50%;background:linear-gradient(180deg,#4b321a 0%,#a17a45 18%,#d4b77e 42%,#f0dfb5 58%,#977144 82%,#432b17 100%);box-shadow:0 5px 9px #09060477,inset 0 1px 1px #fff4d8}.scroll:before{top:-4px}.scroll:after{bottom:-4px}
+    .paper-title{text-align:center;padding:0 0 24px;border-bottom:1px solid #9c784a77;color:#392819}.eyebrow{font:600 .73rem system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#79592f}.paper-title h1{font-size:clamp(2.2rem,7vw,4.3rem);line-height:1;margin:13px 0 12px;color:#392819;text-shadow:0 1px #fff6d8}.paper-title p{max-width:650px;margin:0 auto;color:#58432a;font-size:clamp(1rem,2.2vw,1.14rem);line-height:1.75}.paper-meta{display:flex;justify-content:space-between;gap:12px;margin-top:18px;color:#765b37;font: .72rem system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase}.progress{position:relative;inset:auto;height:3px;margin:18px 0 0;background:#8d70453b;border-radius:3px;overflow:hidden}.progress span{background:linear-gradient(90deg,#946329,#bc8f4d);box-shadow:none}
+    .cast{margin:22px auto 0;max-width:none;padding:14px 0 18px;border:0;border-bottom:1px solid #9c784a55;border-radius:0;color:#493522;background:transparent}.cast summary{color:#72512b}.cast p{color:#493522;font-size:.96rem}
+    .scroll-heading{padding-top:25px}.scroll-heading .ornament{color:#89612e}.scroll-heading h2{color:#392819}.scroll-heading p{color:#765b37}.end{color:#493522;border-top:1px solid #9c784a55;padding-top:24px;margin-top:26px}.end strong{color:#72512b}.backtop{color:#72512b;border-color:#72512b77}
+    @media(max-width:560px){main{padding:14px 18px 42px}.scroll{padding-left:22px;padding-right:22px}.scroll:before,.scroll:after{left:-8px;right:-8px;height:2.5mm}.paper-meta{font-size:.64rem}.cast{padding-top:12px}}
   </style>
 </head>
 <body>
-  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
-  <header class="top"><div class="brand">✦ Archivo del curso</div><div class="readout" id="readout">Prólogo · 30 capítulos</div></header>
-  <section class="cover" id="inicio">
-    <div class="cover-inner">
-      <div class="eyebrow">Una historia de la secundaria técnica</div>
-      <h1>El Team<br>Mafia</h1>
-      <p>En la secundaria técnica, un ruido imposible aparece en el taller y una pista apunta a Tania, que se cambió de escuela. Mientras Francisco se une a un grupo misterioso y sus compañeros sospechan de él, empieza una aventura de códigos, amistad y una señal que parece venir del espacio.</p>
-      <a class="scroll-cue" href="#historia">Deslizá para descubrirla <span class="arrow">↓</span></a>
-    </div>
-  </section>
   <main id="historia">
-    <details class="cast"><summary>Conocé al equipo</summary><p><strong>Lautaro D</strong>, el que siempre cubre las espaldas; <strong>Lautaro C</strong>, el genio de la ciencia cuántica; <strong>Sofía</strong>, capaz de reconocer cualquier melodía; <strong>Alma L</strong>, negociadora extraordinaria; <strong>Francisco</strong>, apasionado por el código; <strong>Bautista</strong>, el bromista impredecible; <strong>Luciano</strong>, su amigo y moderador; <strong>Nerea</strong>, que extraña a Tania; <strong>Angélica</strong>, compañera de Nerea y practicante de química; y <strong>Tania</strong>, cuya ausencia todavía pesa.</p></details>
-    <section class="scroll" aria-label="La historia en pergamino">
-      <div class="scroll-heading"><div class="ornament">✦ ✧ ✦</div><h2>La señal del taller</h2><p>Seguí bajando: cada capítulo aparece en el pergamino</p></div>
+    <section class="scroll" id="inicio" aria-label="La historia completa en pergamino">
+      <div class="paper-title">
+        <div class="eyebrow">Relato de 1ro 2da · Secundaria técnica</div>
+        <h1>El Team Mafia</h1>
+        <p>Un ruido imposible aparece en el taller y una pista apunta a Tania, que se cambió de escuela. Mientras Francisco se une a un grupo misterioso y sus compañeros sospechan de él, empieza una aventura de códigos, amistad y una señal que parece venir del espacio.</p>
+        <div class="paper-meta"><span>✦ Cuaderno del curso</span><span id="readout">Prólogo · 30 capítulos</span></div>
+        <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+      </div>
+      <details class="cast"><summary>Conocé al equipo</summary><p><strong>Lautaro D</strong>, el que siempre cubre las espaldas; <strong>Lautaro C</strong>, el genio de la ciencia cuántica; <strong>Sofía</strong>, capaz de reconocer cualquier melodía; <strong>Alma L</strong>, negociadora extraordinaria; <strong>Francisco</strong>, apasionado por el código; <strong>Bautista</strong>, el bromista impredecible; <strong>Luciano</strong>, su amigo y moderador; <strong>Nerea</strong>, que extraña a Tania; <strong>Angélica</strong>, compañera de Nerea y practicante de química; y <strong>Tania</strong>, cuya ausencia todavía pesa.</p></details>
+      <div class="scroll-heading"><div class="ornament">✦ ✧ ✦</div><h2>La señal del taller</h2><p>30 capítulos · Deslizá y la historia va apareciendo</p></div>
       <div id="chapters"></div>
+      <div class="end"><strong>Fin de esta primera parte…</strong><br>Pero en una técnica, un misterio nunca queda guardado por mucho tiempo.<br><a class="backtop" href="#inicio">Volver al comienzo ↑</a></div>
     </section>
-    <div class="end"><strong>Fin de esta primera parte…</strong><br>Pero en una técnica, un misterio nunca queda guardado por mucho tiempo.<br><a class="backtop" href="#inicio">Volver al comienzo ↑</a></div>
   </main>
-  <footer>Hecho para leer despacio · El Team Mafia</footer>
 <script>
 const chapters = [
 ["El ruido que no figuraba en el plano", "El lunes empezó con un zumbido suave en el taller de la secundaria técnica. La profesora apagó las máquinas, pero el sonido siguió tres segundos más. Sofía levantó la cabeza: tenía ritmo. En el pizarrón, alguien había dibujado siete estrellas y escrito una sola palabra: HORIZONTE."],
